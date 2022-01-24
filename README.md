@@ -7,8 +7,8 @@ This code is made public in conjecture with the paper
 ["Analytic solution to the dynamical friction acting on circularly moving perturbers" by Vincent Desjacques, Adi Nusser and Robin Bühler](https://arxiv.org/abs/2111.07366) and it can be used to reproduce results presented in there. 
 If this code is used, we ask kindly to cite the paper.
 
- ![Example for I(M) with comparison to simulations](IM.png)
- ![Shows I(M) for different M summed up to different values of l_max ](Convergence.png)
+ ![Example for I(M) with comparison to simulations](pictures/IM.png)
+ ![Shows I(M) for different M summed up to different values of l_max ](pictures/Convergence.png)
 
 Introduction
 ===========================================================================
