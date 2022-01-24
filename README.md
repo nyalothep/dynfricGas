@@ -43,7 +43,7 @@ The following libaries are necessary to run the code:
 Usage
 ===========================================================================
 The code can be compiled with:
-```console
+```shell
     make main
 ```    
 then the executable can be run with
