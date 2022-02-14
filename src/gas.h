@@ -7,8 +7,6 @@
 #include <vector>
 #include <boost/math/special_functions.hpp>
 #include "dynFricCommon.h"
-#include <gsl/gsl_integration.h>
-#include <boost/math/quadrature/gauss_kronrod.hpp>
 #include <complex>
 
 /**
@@ -47,7 +45,7 @@ long double ImS(int l,int m,long double Ma);
  * @param Ma Max number
  * @return std::pair<long double, long double> (real part, imaginary part)  \f$ I(M)=\sum_{l=1}^{l_{max}}\sum_{m=-l}^{l-2} (-1)^m \frac{k!}{(k-2)!} \frac{S_{l,l-1}^m-S_{l,l-1}^{m+1*}}{\Gamma((1-l-m)/2)\Gamma(1+(l-m)/2)\Gamma((3-l+m)/2)\Gamma(1+(l+m)/2)}\f$
  */
-std::pair<long double, long double> Im(int maxL, long double Ma);
+std::complex<long double> Im(int maxL, long double Ma);
 /**
  * @brief Calculates the imaginary part of function \f$ I(Ma) \f$.
  * 

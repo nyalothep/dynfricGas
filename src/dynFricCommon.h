@@ -40,7 +40,7 @@ long double summandPref(int m ,int l);
  * @param maxL The upper limit \f$ l_{max} \f$ for the outer sum.
  * @return std::pair<long double,long double> calculates \f$\sum_{l=1}^{l_{max}}\sum_{m=-l}^{l-2} (-1)^m \frac{(l-m)!}{(l-m-2)!} \frac{S_{l,l-1}^m-S_{l,l-1}^{m+1*}}{\Gamma((1-l-m)/2)\Gamma(1+(l-m)/2)\Gamma((3-l+m)/2)\Gamma(1+(l+m)/2)} \f$
  */
-std::pair<long double,long double> sum(std::function<long double (int,int)> re, std::function<long double (int,int)> im, int maxL);
+std::complex<long double> sum(std::function<long double (int,int)> re, std::function<long double (int,int)> im, int maxL);
 
 /**
  * @brief Calculates the sum for either the real or imaginary part of \f$ I(\mathcal M) \f$.

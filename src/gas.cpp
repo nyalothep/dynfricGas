@@ -29,10 +29,10 @@ long double gas::ImS(int l,int m,long double Ma)
 
 
 
-std::pair<long double, long double> gas::Im(int maxL, long double Ma)
+std::complex<long double> gas::Im(int maxL, long double Ma)
 {
-    std::pair<long double, long double> result=sum(std::bind( &gas::ReS,this, std::placeholders::_1,std::placeholders::_2,Ma ),std::bind(&gas::ImS,this, std::placeholders::_1,std::placeholders::_2,Ma),maxL  );
-    return  std::pair<long double, long double> (Ma*Ma*result.first,Ma*Ma*result.second);   
+    std::complex<long double> result=sum(std::bind( &gas::ReS,this, std::placeholders::_1,std::placeholders::_2,Ma ),std::bind(&gas::ImS,this, std::placeholders::_1,std::placeholders::_2,Ma),maxL  );
+    return  std::complex<long double> (Ma*Ma*result.real(),Ma*Ma*result.imag());   
 }
 
 

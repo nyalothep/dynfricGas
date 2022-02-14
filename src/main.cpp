@@ -17,9 +17,9 @@ int main (int argc, char **argv)
     {
         for (int l=min_l; l<max_l; l+=step_l)
         {
-            std::pair<long double, long double> result=gasC.Im(l,machnumbers[i]);
+            std::complex<long double> result=gasC.Im(l,machnumbers[i]);
             
-            std::cout<<machnumbers[i]<<"  "<<l<<"  "<<result.first<<"  "<<result.second<<std::endl;
+            std::cout<<machnumbers[i]<<"  "<<l<<"  "<<result.real()<<"  "<<result.imag()<<std::endl;
         }
         
         std::cout<<std::endl;

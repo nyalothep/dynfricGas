@@ -31,7 +31,7 @@ long double dynFricCommon::summandPref(int m ,int l)
     return pref/gammas;
 }
 
-std::pair<long double,long double> dynFricCommon::sum(std::function<long double (int,int)> res, std::function<long double (int,int)> ims, int maxL)
+std::complex<long double> dynFricCommon::sum(std::function<long double (int,int)> res, std::function<long double (int,int)> ims, int maxL)
 {
     //Save the results for the seperate l into an array to speed up the parallel calculation.
     std::vector<std::pair<long double, long double> > results;
@@ -74,7 +74,7 @@ std::pair<long double,long double> dynFricCommon::sum(std::function<long double 
         imout+=results[i].second;
     }
 
-    return std::pair<long double, long double> (reout,imout);
+    return std::complex<long double> (reout,imout);
 }
 
 long double dynFricCommon::sumSingle (std::function<long double (int,int)> func,int maxL, bool realPart)
